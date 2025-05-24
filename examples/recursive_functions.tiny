@@ -1,0 +1,49 @@
+func factorial(n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+func fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+func power(base, exponent) {
+    if (exponent == 0) {
+        return 1;
+    } else {
+        return base * power(base, exponent - 1);
+    }
+}
+
+func gcd(a, b) {
+    if (b == 0) {
+        return a;
+    } else {
+        return gcd(b, a - (a / b) * b);  // a % b equivalent
+    }
+}
+
+func countDigits(n) {
+    if (n < 10) {
+        return 1;
+    } else {
+        return 1 + countDigits(n / 10);
+    }
+}
+
+let fact5 = factorial(5);      // 120
+let fib7 = fibonacci(7);       // 13  
+let pow23 = power(2, 3);       // 8
+let gcd48_18 = gcd(48, 18);    // 6
+let digits = countDigits(12345); // 5
+
+let result = factorial(3) + fibonacci(5) + power(2, 4);
+
+result; 

@@ -1,0 +1,38 @@
+let pi = 3;
+let radius = 5;
+
+func square(x) {
+    return x * x;
+}
+
+func circleArea(r) {
+    return pi * square(r);
+}
+
+func max(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+func abs(x) {
+    if (x < 0) {
+        return -x;
+    } else {
+        return x;
+    }
+}
+
+let area = circleArea(radius);
+let maxValue = max(10, 25);
+let negativeTest = abs(-42);
+
+let greeting = "Result: ";
+let description = "Circle area with radius " + "5";
+
+let isLarge = area > 50;
+let isPositive = negativeTest > 0;
+
+area; 

@@ -1,0 +1,49 @@
+let userName = "Bob";
+let userAge = 30;
+let isActive = true;
+let accountBalance = 1500;
+
+func calculateBonus(salary, performanceRating) {
+    if (performanceRating > 8) {
+        return salary * 15 / 100;
+    } else {
+        if (performanceRating >= 5) {
+            return salary * 10 / 100;
+        } else {
+            return 0;
+        }
+    }
+}
+
+func getUserStatus(age, balance) {
+    if (age >= 18 && balance > 1000) {
+        return "Premium Member";
+    } else {
+        if (age >= 18) {
+            return "Standard Member";
+        } else {
+            return "Youth Account";
+        }
+    }
+}
+
+let salary = 50000;
+let rating = 9;
+let bonus = calculateBonus(salary, rating);
+let status = getUserStatus(userAge, accountBalance);
+
+let canGetLoan = (userAge >= 21) && (accountBalance >= 5000) && isActive;
+let needsUpgrade = !canGetLoan || (rating < 7);
+
+let welcomeMessage = "Welcome, " + userName + "!";
+let statusMessage = "Your status: " + status;
+
+if (canGetLoan) {
+    if (bonus > 5000) {
+        let specialOffer = "Eligible for premium loan package";
+    } else {
+        let standardOffer = "Eligible for standard loan package";
+    }
+} else {
+    let improvement = "Please improve your account standing";
+} 

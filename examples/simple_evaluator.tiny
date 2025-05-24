@@ -1,0 +1,57 @@
+func evaluateAddition(left, right) {
+    return left + right;
+}
+
+func evaluateMultiplication(left, right) {
+    return left * right;
+}
+
+func evaluateExpression() {
+    let first_number = 2;
+    let second_number = 3;
+    let third_number = 4;
+    
+    let multiplication_result = evaluateMultiplication(second_number, third_number);
+    
+    let final_result = evaluateAddition(first_number, multiplication_result);
+    
+    return final_result;
+}
+
+func fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+func simpleVM(operation, a, b) {
+    if (operation == 1) {
+        return a + b;
+    }
+    if (operation == 2) {
+        return a - b;
+    }
+    if (operation == 3) {
+        return a * b;
+    }
+    if (operation == 4) {
+        return a / b;
+    }
+    return 0;
+}
+
+func executeProgram() {
+    let step1 = simpleVM(1, 5, 3);  // 5 + 3 = 8
+    let step2 = simpleVM(3, step1, 2);  // 8 * 2 = 16
+    return step2;
+}
+
+let expr_result = evaluateExpression();  // Should be 14
+let fib_result = fibonacci(6);           // Should be 8  
+let vm_result = executeProgram();        // Should be 16
+
+let total = expr_result + fib_result + vm_result;  // 14 + 8 + 16 = 38
+
+total; 
