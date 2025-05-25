@@ -38,7 +38,6 @@ func RunIntegrationTests(t *testing.T) {
 func runTestCase(t *testing.T, testCase TestCase) {
 	if !fileExists(testCase.InputFile) {
 		t.Fatalf("Test file does not exist: %s", testCase.InputFile)
-		return
 	}
 
 	// Capture output from RunFile
