@@ -252,14 +252,14 @@ This report shows the test coverage for the Tiny Language interpreter.
 - Complex features: ✓
 
 ### Test Files Covered
-`
+`)
 
 	// Add example files to report
 	exampleFiles, _ := filepath.Glob("examples/*.tiny")
 	for _, file := range exampleFiles {
-		report += fmt.Sprintf("- %s\n", file)
+		builder.WriteString(fmt.Sprintf("- %s\n", file))
 	}
 
 	// Write report
-	os.WriteFile("TEST_REPORT.md", []byte(report), 0644)
+	os.WriteFile("TEST_REPORT.md", []byte(builder.String()), 0644)
 }
